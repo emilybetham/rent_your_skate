@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
   end
@@ -12,7 +11,6 @@ class BookingsController < ApplicationController
     else
       render :new
     end
-
   end
 
   private
