@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'products#index'
 
-  get '/users/dashboard', to: 'users#dashboard'
+  get '/dashboard', to: 'users#dashboard'
   resources :products, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
   end

@@ -9,10 +9,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     authorize @booking
     @booking.product = Product.find(params[:product_id])
     if @booking.save
-      redirect_to users_dashboard_path
+      redirect_to dashboard_path
     else
       render :new
     end
