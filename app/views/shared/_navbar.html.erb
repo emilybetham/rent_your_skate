@@ -10,6 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+      <%= "Hello, #{current_user.name}!" %>
       <%= link_to "My Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
 
