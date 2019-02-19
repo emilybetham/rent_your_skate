@@ -10,11 +10,11 @@
         </div>
         <div class="message-body">
           <p><strong><%= booking.product.name %></strong></p>
-          <p><%= "Booking request for your #{booking.product.category} on #{booking.date}" %></p>
+          <p><%= "Booking request for your #{booking.product.category} from #{booking.start_day} to #{booking.end_day}" %></p>
         </div>
         <div class="message-status">
           <p class="status pending">Pending</p>
-          <p class="price">€<%= booking.product.price %></p>
+          <p class="price">€<%= booking.product.price  %></p>
         </div>
       </li>
     <% end %>
@@ -30,7 +30,7 @@
         </div>
         <div class="message-body">
           <p><strong><%= booking.product.name %></strong></p>
-          <p><%= "Booking request for your #{booking.product.category} on #{booking.date}" %></p>
+          <p><%= "Booking request for your #{booking.product.category} from to" %></p>
         </div>
         <div class="message-status">
           <p class="status pending">Pending</p>
