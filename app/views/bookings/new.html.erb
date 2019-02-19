@@ -1,6 +1,7 @@
 <h1>Book</h1>
 
 <%= simple_form_for [@product, @booking] do |f| %>
-  <%= f.input :date, as: :string,  input_html: {class: "datepicker"} %>
+  <%= f.input :start_day, as: :string,  input_html: {class: "datepicker"} %>
+  <%= f.input :end_day, as: :string,  input_html: {class: "datepicker"} %>
   <%= f.submit %>
 <% end %>
