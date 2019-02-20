@@ -3,8 +3,11 @@ class ProductsController < ApplicationController
 
   def index
     skip_policy_scope
-    @products = Product.where.not(latitude: nil, longitude: nil)
-
+    if params[:address].present?
+      @products = Product.near(params[:address], 5)
+    else
+      @products = Product.where.not(latitude: nil, longitude: nil)
+    end
     @markers = @products.map do |product|
       {
         lng: product.longitude,
