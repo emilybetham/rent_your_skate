@@ -1,4 +1,5 @@
 <div class="container-dashboard">
+  <div class="row">
   <div class="col-xs-6">
     <% if @products %>
       <ul class="dash-ul">
@@ -8,10 +9,11 @@
             <%= cl_image_tag product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
               <div class="message-name">
                 <h3><%= product.name %></h3>
-                <p><%= product.description %></p>
+                <p><%= product.category %></p>
               </div>
               <div class="message-body">
                 <p><strong><%= product.name %></strong></p>
+                <p><%= product.description %></p>
               </div>
               <div class="message-status">
                 <i class="fas fa-pen-square"></i>
@@ -21,12 +23,10 @@
         </ul>
       </div>
     <% end %>
-  </div>
-  <div class="row">
     <% if @my_bookings %>
       <div class="col-xs-6">
         <ul class="dash-ul">
-          <h2>My booking</h2>
+          <h2 class="dash-h2">My bookings</h2>
           <% @my_bookings.each do |booking| %>
           <% if booking.status == 'Pending' %>
             <li class="message">
@@ -42,7 +42,7 @@
                 <div class="message-status">
                   <p><%= link_to 'Accept', dashboard_path(booking_id: booking.id), method: :patch %></p>
                   <p><%= link_to 'Reject', dashboard_path(booking_id: booking.id), method: :put %></p>
-                  <p class="price">€<%= booking.product.price %></p>
+                  <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
                 </div>
               </li>
               <% else %>
@@ -58,7 +58,7 @@
                   </div>
                   <div class="message-status">
                     <p class="status <%= booking.status %>"><%= booking.status %></p>
-                    <p class="price">€<%= booking.product.price %></p>
+                    <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
                   </div>
                 </li>
             <% end %>
@@ -70,7 +70,7 @@
     <% if @bookings %>
       <div class="col-xs-6">
         <ul class="dash-ul">
-          <h2>My products booked</h2>
+          <h2 class="dash-h2">My products booked</h2>
           <% @bookings.each do |booking| %>
           <li class="message">
             <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
@@ -93,4 +93,7 @@
     <% end %>
   </div>
 </div>
+  </div>
+
+
 
