@@ -1,0 +1,31 @@
+.mapboxgl-popup {
+  max-width: 290px;
+}
+
+.mapboxgl-popup-content {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('skate-park.jpg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-color: rgb(235,235,235) !important;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px !important;
+  padding: 0px !important;
+  color: white !important;
+}
+
+.info-card{
+    padding: 0px 7px;
+    color: black;
+    padding: -4px;
+    background-color: #e8e5e5;
+    padding-bottom: 1px;
+}
+
+.p {
+  margin: 0px !important;
+}
+
+.h5{
+  padding: 18px !important;
+}
