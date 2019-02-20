@@ -1,10 +1,22 @@
-<%= simple_form_for @product do |f| %>
-  <%= f.input :name, placeholder: 'Anne\'s skateboard' %>
-  <%= f.input :category, collection: ["skateboard", "bike", "scooter", "roller skates"] %>
-  <%= f.input :description, placeholder: 'Girl Kodak Carroll 8.375 X 31.75, taille 8.3' %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.input :price, placeholder: '15 €' %>
-  <%= f.input :address, placeholder: '19 rue de Turenne, 75004 Paris' %>
-  <%= f.submit %>
-<% end %>
+<div class="signup">
+<!-- <img src="images/signup-bg.jpg" alt=""> -->
+  <div class="container-form">
+    <div class="signup-content">
+      <h2 class="form-title">Create a product</h2>
+      <div class="form-group">
+        <%= simple_form_for @product do |f| %>
+          <%= f.input :name, placeholder: 'Anne\'s skateboard' %>
+          <%= f.input :category, collection: ["skateboard", "bike", "scooter", "roller skates"] %>
+          <%= f.input :description, placeholder: 'Girl Kodak Carroll 8.375 X 31.75, taille 8.3' %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.input :price, placeholder: '15 €' %>
+          <%= f.input :address, placeholder: '19 rue de Turenne, 75004 Paris' %>
+          <div class="form-actions">
+            <%= f.button :submit, "Create product" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
