@@ -28,22 +28,40 @@
         <ul class="dash-ul">
           <h2 class="dash-h2">My bookings</h2>
           <% @my_bookings.each do |booking| %>
-          <li class="message">
-            <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
-              <div class="message-name">
-                <h3><%= booking.user.name %></h3>
-                <p><%= booking.user.email %></p>
-              </div>
-              <div class="message-body">
-                <p><strong><%= booking.product.name %></strong></p>
-                <p><%= "Booking request for your #{booking.product.category} from to" %></p>
-              </div>
-              <div class="message-status">
-                <p class="status pending btn">Accepté</p>
-                <p class="status pending btn">Refusé</p>
-                <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
-              </div>
-            </li>
+          <% if booking.status == 'Pending' %>
+            <li class="message">
+              <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
+                <div class="message-name">
+                  <h3><%= booking.user.name %></h3>
+                  <p><%= booking.user.email %></p>
+                </div>
+                <div class="message-body">
+                  <p><strong><%= booking.product.name %></strong></p>
+                  <p><%= "Booking request for your #{booking.product.category} from to" %></p>
+                </div>
+                <div class="message-status">
+                  <p><%= link_to 'Accept', dashboard_path(booking_id: booking.id), method: :patch %></p>
+                  <p><%= link_to 'Reject', dashboard_path(booking_id: booking.id), method: :put %></p>
+                  <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
+                </div>
+              </li>
+              <% else %>
+                <li class="message">
+                <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
+                  <div class="message-name">
+                    <h3><%= booking.user.name %></h3>
+                    <p><%= booking.user.email %></p>
+                  </div>
+                  <div class="message-body">
+                    <p><strong><%= booking.product.name %></strong></p>
+                    <p><%= "Booking request for your #{booking.product.category} from to" %></p>
+                  </div>
+                  <div class="message-status">
+                    <p class="status <%= booking.status %>"><%= booking.status %></p>
+                    <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
+                  </div>
+                </li>
+            <% end %>
           <% end %>
         </ul>
       </div>
@@ -65,7 +83,7 @@
                 <p><%= "Booking request for your #{booking.product.category} from #{booking.start_day} to #{booking.end_day}" %></p>
               </div>
               <div class="message-status">
-                <p class="status pending">Pending</p>
+                <p class="status <%= booking.status %>"><%= booking.status %></p>
                 <p class="price">€<%= booking.product.price  %></p>
               </div>
             </li>
