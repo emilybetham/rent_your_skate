@@ -4,7 +4,7 @@
     <p>Unique sport experiences</p>
     <h4>find equipment near you...</h4>
     <div class="address-form">
-    <%= form_tag('/', method: :get) do %>
+    <%= form_tag('#cards-all', method: :get) do %>
       <%= text_field_tag :address %>
       <%= submit_tag 'Enter your address', id: "submit" %>
     <% end %>
@@ -13,7 +13,7 @@
 </div>
 
 
-<div class="wrapper-grey padded">
+<div id="cards-all" class="wrapper-grey padded">
   <div class="container">
     <h2 class="text-center"></h2>
     <div class="row">

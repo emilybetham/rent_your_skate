@@ -2,7 +2,7 @@
   <div class="col-xs-6">
     <% if @products %>
       <ul class="dash-ul">
-        <h2 class="dash-h2">Your products</h2>
+        <h2 class="dash-h2">My products</h2>
         <% @products.each do |product| %>
           <li class="message">
             <%= cl_image_tag product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
