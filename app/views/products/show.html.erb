@@ -1,4 +1,53 @@
-<h1><%= @product.category %></h1>
-<h2><%= @product.description %></h2>
-<%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
+  <div class="row">
+    <div class="col-xs-6">
+      <%= cl_image_tag @product.photo, height: 700, width: 600, crop: :fill %>
+    </div>
+    <div class="col-xs-6 col">
+      <h1><%= @product.name %></h1>
+      <h4><%= @product.category %></h4>
+      <p><%= @product.description %></p>
+      <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat vel ipsam nesciunt, aperiam perferendis unde fugiat quam ut consequuntur, cum omnis totam dignissimos quis quaerat nemo, error temporibus mollitia quia!</em></p>
+      <br>
+        <div class="signup signup-booking">
+    <div class="signup-content">
+      <h2 class="price">
+        <%= @product.price %>€ par jour
+      </h2>
+      <div class="form-group">
+        <%= simple_form_for [@product, @booking] do |f| %>
+          <%= f.input :start_day, as: :string,  input_html: {class: "datepicker"} %>
+          <%= f.input :end_day, as: :string,  input_html: {class: "datepicker"} %>
+        <div class="form-actions">
+          <%= f.button :submit, "Booke" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+    </div>
+
+  </div>
+  <div class="wrapper-white">
+    <div class="container">
+      <h2 class="text-center">Choose an other products:</h2>
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-xs-12 col-md-4 col-sm-3">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+             url('<%= cl_image_path product.photo, height: 300, width: 400, crop: :fill %>')">
+              <div class="card-category"><%= product.category %></div>
+              <div class="card-description">
+                <h2><%= product.name %></h2>
+                <p><%= product.description %></p>
+              </div>
+              <%= link_to '', product_path(product), class: "card-link" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
+
 

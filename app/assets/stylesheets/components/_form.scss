@@ -6,10 +6,16 @@ body {
   font-family: 'Montserrat';
 }
 
+.container-form {
+  width: 58%;
+  margin: auto;
+}
+
 .container {
   width: 660px;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .position-center {
   position: absolute;
@@ -21,7 +27,7 @@ body {
 .signup-content {
   background: #fff;
   border-radius: 10px;
-  padding: 50px 85px;
+  padding: 50px 65px;
   margin-top: 30px; }
 
 .form-group {
@@ -40,9 +46,16 @@ body {
   color: #222; }
 
 input.btn {
-  background-color: #7E7E7E;
+  background-color: #00347B;
   color: white;
   padding: 5px 40px 5px 40px;
+  border-radius: 20px;
+}
+
+input.btn:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
 }
 
 label.form-check-label.boolean.optional {

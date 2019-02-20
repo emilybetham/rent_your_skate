@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :bookings
 
   validates :name, :category, :photo, :price, :address, presence: true
-  validates :category, inclusion: { in: ["skateboard", "bike", "scooter", "roller skates"] }
+  validates :category, inclusion: { in: ["skateboard", "bike", "scooter", "roller skates", "swim"] }
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?

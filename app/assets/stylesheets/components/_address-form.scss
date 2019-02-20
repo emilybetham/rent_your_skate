@@ -1,0 +1,20 @@
+.address-form {
+  color: black;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: bold;
+  #submit {
+    background-color: #2981D0;
+    color: white !important;
+    font-weight: lighter !important;
+    border: none;
+    border-radius: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
