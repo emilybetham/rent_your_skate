@@ -8,7 +8,8 @@ class ProductsController < ApplicationController
     @markers = @products.map do |product|
       {
         lng: product.longitude,
-        lat: product.latitude
+        lat: product.latitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { product: product })
       }
     end
   end
