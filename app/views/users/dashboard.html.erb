@@ -39,7 +39,7 @@
                 <p><%= "Booking request for your #{booking.product.category} from to" %></p>
               </div>
               <div class="message-status">
-                <p class="status pending">Pending</p>
+                <p class="status"> <%= booking.status %></p>
                 <p class="price">€<%= booking.product.price %></p>
               </div>
             </li>
