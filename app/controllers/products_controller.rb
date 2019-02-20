@@ -2,7 +2,15 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @products = policy_scope(Product).order(created_at: :desc)
+    skip_policy_scope
+    @products = Product.where.not(latitude: nil, longitude: nil)
+
+    @markers = @products.map do |product|
+      {
+        lng: product.longitude,
+        lat: product.latitude
+      }
+    end
   end
 
   def show
