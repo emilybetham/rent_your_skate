@@ -48,7 +48,7 @@ products_attributes = [
   {
     name:         'Julia\'s palm',
     category:     'swim',
-    address:      '23 rue de Oberkampf, 75011 Paris',
+    address:      '23 rue Oberkampf, 75011 Paris',
     description:  'Nice palme in Piccadilly',
     price:        9,
     photo:        'https://images.unsplash.com/photo-1499242015907-fd91d5d02f13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
@@ -57,7 +57,7 @@ products_attributes = [
   {
     name:         'Celia\'s roller',
     category:     'roller skates',
-    address:      '23 rue de Oberkampf, 75011 Paris',
+    address:      '23 rue Oberkampf, 75011 Paris',
     description:  'Nice palme in Piccadilly',
     price:        9,
     photo:        'https://images.unsplash.com/photo-1517177646641-83fe10f14633?ixlib=rb-1.2.1&auto=format&fit=crop&w=804&q=80',
@@ -66,7 +66,7 @@ products_attributes = [
   {
     name:         'Dania\'s skateboard',
     category:     'skateboard',
-    address:      '23 rue de Oberkampf, 75011 Paris',
+    address:      '23 rue Oberkampf, 75011 Paris',
     description:  'Nice palme in Piccadilly',
     price:        9,
     photo:        'https://images.unsplash.com/photo-1467546706352-fa0391181b7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
@@ -75,7 +75,7 @@ products_attributes = [
   {
     name:         'Emily\'s bike',
     category:     'bike',
-    address:      '23 rue de Oberkampf, 75011 Paris',
+    address:      '23 rue Oberkampf, 75011 Paris',
     description:  'Nice palme in Piccadilly',
     price:        9,
     photo:        'https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
