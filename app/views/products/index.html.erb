@@ -2,13 +2,13 @@
   <div class="banner-content">
     <h1>RENT YOUR <span id="banner-typed-text"></span></h1>
     <p>Unique sport experiences</p>
+    <h4>find equipment near you...</h4>
     <div class="address-form">
     <%= form_tag('/', method: :get) do %>
       <%= text_field_tag :address %>
       <%= submit_tag 'Enter your address', id: "submit" %>
     <% end %>
     </div>
-    <%= link_to 'Find your product', products_path, class: "btn btn-primary btn-lg" %>
   </div>
 </div>
 
