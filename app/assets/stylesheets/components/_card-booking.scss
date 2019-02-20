@@ -1,3 +1,29 @@
+.container-dashboard {
+  margin: 20px
+}
+
+.dash-h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.dash-ul {
+  background: white;
+  padding-left: unset;
+}
+
+li.message {
+  background-color: white;
+  border-left: 7px solid #aaa9a9;
+  height: 100px;
+  padding-left: 0px;
+}
+
+img.avatar-large {
+  height: 100px;
+  width: auto;
+}
+
 .message {
   display: flex;
   align-items: center;
@@ -12,7 +38,7 @@
 }
 .message-name {
   padding-left: 10px;
-  min-width: 100px;
+  min-width: 165px;
 }
 .message-name h3 {
   font-size: 13px;
