@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root to: 'products#index'
 
   get '/dashboard', to: 'users#dashboard'
+  patch '/dashboard', to: 'bookings#accepted'
+  put '/dashboard', to: 'bookings#rejected'
+
+
   resources :products, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
   end
