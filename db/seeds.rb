@@ -46,7 +46,7 @@ products_attributes = [
   {
     name:         'Romain\'s scooter',
     category:     'scooter',
-    address:      '23 rue de Oberkampf, 75011 Paris',
+    address:      '23 rue Oberkampf, 75011 Paris',
     description:  'Nice palme in Piccadilly',
     price:        9,
     photo:        'https://images.unsplash.com/photo-1541614705297-1cec36271936?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
