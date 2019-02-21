@@ -1,7 +1,7 @@
 .address-form {
   color: black;
   font-family: "Open Sans", "Helvetica", "sans-serif";
-  font-weight: bold;
+  text-align: initial;
   #submit {
     background-color: #2981D0;
     color: white !important;
@@ -12,9 +12,21 @@
     padding-bottom: 3px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: 4px;
     &:hover {
       opacity: 0.6;
     }
   }
 }
 
+.form-home {
+  display: flex;
+}
+
+.custom-margin {
+  margin-right: 20px;
+}
+
+.custom-font-size {
+  font-size: 15px;
+}
