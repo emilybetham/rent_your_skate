@@ -1,12 +1,27 @@
-<div class="container-dashboard">
-  <div class="row">
-  <div class="col-xs-6">
-    <% if @products %>
-      <ul class="dash-ul">
-        <h2 class="dash-h2">My products</h2>
-        <% @products.each do |product| %>
-          <li class="message">
-            <%= cl_image_tag product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
+<div id="container-tabs">
+  <ul class="list-inline tabs-underlined">
+    <li class="tabs" >
+      <%= link_to 'My equipment', dashboard_path, class: "tab-underlined active", data: { content_name: "my-equipment" }%>
+    </li>
+    <li class="tabs">
+      <%= link_to 'My bookings', dashboard_path, class: "tab-underlined", data: { content_name: "my-bookings" }%>
+    </li>
+    <li class="tabs">
+      <%= link_to 'My equipment booked', dashboard_path, class: "tab-underlined", data: { content_name: "my-equipment-booked" } %>
+    </li>
+  </ul>
+</div>
+
+
+<div class= "container-dashboard">
+  <div id= "my-equipment" class= "row tab-content active">
+    <div class="col-md-8 col-md-offset-2">
+      <% if @products %>
+        <ul class="dash-ul">
+          <h2 class="dash-h2">My equipment</h2>
+          <% @products.each do |product| %>
+            <li class="message">
+              <%= cl_image_tag product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
               <div class="message-name">
                 <h3><%= product.name %></h3>
                 <p><%= product.category %></p>
@@ -16,21 +31,26 @@
                 <p><%= product.description %></p>
               </div>
               <div class="message-status">
-                <i class="fas fa-pen-square"></i>
+                <div class="border-pencil">
+                <%= image_tag "color-pencil.png", width: 20, class: "pencil" %>
+                </div>
               </div>
-            <% end %>
-          </li>
+            </li>
+          <% end %>
         </ul>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id= "my-bookings" class="row tab-content">
     <% if @my_bookings %>
-      <div class="col-xs-6">
+      <div class="col-md-8 col-md-offset-2">
         <ul class="dash-ul">
           <h2 class="dash-h2">My bookings</h2>
           <% @my_bookings.each do |booking| %>
-          <% if booking.status == 'Pending' %>
-            <li class="message">
-              <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
+            <% if booking.status == 'Pending' %>
+              <li class="message">
+                <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
                 <div class="message-name">
                   <h3><%= booking.user.name %></h3>
                   <p><%= booking.user.email %></p>
@@ -45,35 +65,37 @@
                   <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
                 </div>
               </li>
-              <% else %>
-                <li class="message">
+            <% else %>
+              <li class="message">
                 <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
-                  <div class="message-name">
-                    <h3><%= booking.user.name %></h3>
-                    <p><%= booking.user.email %></p>
-                  </div>
-                  <div class="message-body">
-                    <p><strong><%= booking.product.name %></strong></p>
-                    <p><%= "Booking request for your #{booking.product.category} from to" %></p>
-                  </div>
-                  <div class="message-status">
-                    <p class="status <%= booking.status %>"><%= booking.status %></p>
-                    <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
-                  </div>
-                </li>
+                <div class="message-name">
+                  <h3><%= booking.user.name %></h3>
+                  <p><%= booking.user.email %></p>
+                </div>
+                <div class="message-body">
+                  <p><strong><%= booking.product.name %></strong></p>
+                  <p><%= "Booking request for your #{booking.product.category} from to" %></p>
+                </div>
+                <div class="message-status">
+                  <p class="status <%= booking.status %>"><%= booking.status %></p>
+                  <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
+                </div>
+              </li>
             <% end %>
           <% end %>
         </ul>
       </div>
     <% end %>
+  </div>
 
+  <div id= "my-equipment-booked" class= "row tab-content">
     <% if @bookings %>
-      <div class="col-xs-6">
+      <div class="col-md-8 col-md-offset-2">
         <ul class="dash-ul">
-          <h2 class="dash-h2">My products booked</h2>
+          <h2 class="dash-h2">My equipment booked</h2>
           <% @bookings.each do |booking| %>
-          <li class="message">
-            <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
+            <li class="message">
+              <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
               <div class="message-name">
                 <h3><%= booking.user.name %></h3>
                 <p><%= booking.user.email %></p>
@@ -84,7 +106,7 @@
               </div>
               <div class="message-status">
                 <p class="status <%= booking.status %>"><%= booking.status %></p>
-                <p class="price">€<%= booking.product.price  %></p>
+                <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
               </div>
             </li>
           <% end %>
@@ -93,7 +115,5 @@
     <% end %>
   </div>
 </div>
-  </div>
-
 
 

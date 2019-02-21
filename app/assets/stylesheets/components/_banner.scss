@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .banner h1 {
   font-size: 50px;
@@ -25,6 +26,3 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.banner .btn {
-  margin-top: 20px;
-}

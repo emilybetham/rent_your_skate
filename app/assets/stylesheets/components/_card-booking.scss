@@ -1,5 +1,6 @@
 .container-dashboard {
-  margin: 20px
+  margin: 20px;
+  margin-bottom: 40px;
 }
 
 .dash-h2 {
@@ -10,10 +11,10 @@
 
 .dash-ul {
   background: white;
-  padding-left: unset;
+  padding: 5px 15px;
   margin-bottom: 0px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 li.message {
@@ -21,6 +22,7 @@ li.message {
   border-left: 7px solid #aaa9a9;
   height: 100px;
   padding-left: 0px;
+  margin: 2px;
 }
 
 img.avatar-large {
@@ -41,8 +43,8 @@ img.avatar-large {
   flex-grow: 1;
 }
 .message-name {
-  padding-left: 10px;
-  min-width: 165px;
+  padding-left: 26px;
+  min-width: 244px;
 }
 .message-name h3 {
   font-size: 13px;
@@ -82,5 +84,18 @@ img.avatar-large {
 }
 .status.Pending {
   color: lightgrey;
+}
+.border-pencil {
+  border-radius: 50%;
+  border: 1px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.pencil {
+  position: absolute;
+  top: 7px;
+  right: 7px;
 }
 
