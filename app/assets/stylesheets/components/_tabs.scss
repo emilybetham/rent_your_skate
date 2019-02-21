@@ -19,7 +19,7 @@
 }
 
 #container-tabs {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .tab-content {
@@ -28,4 +28,8 @@
 
 .tab-content.active {
   display: block;
+}
+
+a.tab-underlined {
+  font-size: 18px;
 }
