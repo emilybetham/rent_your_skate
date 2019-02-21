@@ -84,7 +84,7 @@
               </div>
               <div class="message-status">
                 <p class="status <%= booking.status %>"><%= booking.status %></p>
-                <p class="price">€<%= booking.product.price  %></p>
+                <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
               </div>
             </li>
           <% end %>
