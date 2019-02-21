@@ -12,7 +12,8 @@ class ProductsController < ApplicationController
       {
         lng: product.longitude,
         lat: product.latitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { product: product })
+        infoWindow: render_to_string(partial: "infowindow", locals: { product: product }),
+        image_url: helpers.asset_url('pin-map.png')
       }
     end
   end
