@@ -1,3 +1,5 @@
+require 'faker'
+
 users_attributes = [
   {
     name:         'Emily',
@@ -88,4 +90,26 @@ products_attributes.each do |attribute|
   product.remote_photo_url = attribute[:photo]
   product.save!
 end
+
+
+attribute_faker = []
+  20.times do attribute_faker <<
+  {
+  name:         Faker::Creature::Cat.name,
+  category:     ["skateboard", "bike", "scooter", "roller skates", "swim"].sample,
+  address:      Faker::Address.full_address,
+  description:  'lorem',
+  price:        rand(1..100),
+  photo:        'https://source.unsplash.com/1600x900/?sport',
+  user_id:      rand(1..3),
+  }
+end
+
+attribute_faker.each do |attribute|
+  product_faker = Product.new(attribute)
+  product_faker.remote_photo_url = attribute[:photo]
+  product_faker.save!
+end
+
+
 # Product.create!(products_attributes)
