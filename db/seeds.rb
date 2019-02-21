@@ -77,8 +77,8 @@ products_attributes = [
   {
     name:         'Emily\'s bike',
     category:     'bike',
-    address:      '123 avenue de suffren, 75015 Paris',
-    description:  'Nice palme in Piccadilly',
+    address:      '9 rue d\'orsel',
+    description:  'lorem',
     price:        9,
     photo:        'https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
     user_id:      1
@@ -93,11 +93,16 @@ end
 
 
 attribute_faker = []
-  20.times do attribute_faker <<
+  10.times do attribute_faker <<
   {
   name:         Faker::Creature::Cat.name,
   category:     ["skateboard", "bike", "scooter", "roller skates", "swim"].sample,
-  address:      Faker::Address.full_address,
+  address:      ['116 Castelbou, 12400, Vabres-l\'Abbaye, Aveyron, Occitanie', '115 La Transeuropéenne, 19200, Saint-Étienne-aux-Clos', '84 Avenue de la Brigade Piron, 14640 Villers-sur-Mer',
+                '1969 Stiedemann Squares, East Damonmouth Greenland, GL', '40 North 1, Petit Bourg, Petit-Bourg, Basse-Terre, Guadeloupe', '127 Unnamed Road, 224116, Faizabad, Uttar Pradesh, India',
+                '644 Tillman Ridges, Mosul, Nineveh Governorate, Iraq', '6476 Upton Unions, Amara, Maysan Governorate, Iraq', '20 Via Morer delle Anime, 31010, Mareno di Piave, Provincia di Treviso, Veneto, Italy',
+                '46215 Orn Mill, 958-0203, Murakami-shi, Niigata-ken, Japan', '152, Vidzemes iela, 5422, Daugavpils, Latvia', '901 Florida Plain, Hauckstad, Macao', '198 Hamzin Potok, Rozaje, Rožaje Municipality, Montenegro',
+                '156 Unnamed Road, 9691, Fiordland National Park, Southland, New Zealand', '5501 McCullough Branch, Hattfjelldal Municipality, Nordland, Norway', '2209 Genoveva Manors, Agusan del Sur, Caraga, Philippines'
+                ].sample,
   description:  'lorem',
   price:        rand(1..100),
   photo:        'https://source.unsplash.com/1600x900/?sport',
@@ -111,5 +116,3 @@ attribute_faker.each do |attribute|
   product_faker.save!
 end
 
-
-# Product.create!(products_attributes)
