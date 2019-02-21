@@ -23,7 +23,9 @@ import { initAutocomplete } from '../plugins/init_autocomplete'
 
 initAutocomplete();
 
-
 if (document.getElementById('banner-typed-text')) {
   loadDynamicBannerText();
 }
+
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
