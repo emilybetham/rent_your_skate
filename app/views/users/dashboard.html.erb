@@ -1,20 +1,20 @@
 <div id="container-tabs">
   <ul class="list-inline tabs-underlined">
-    <li >
-      <%= link_to 'My equipment', dashboard_path, class: "tab-underlined active"%>
+    <li class="tabs" >
+      <%= link_to 'My equipment', dashboard_path, class: "tab-underlined active", data: { content_name: "my-equipment" }%>
     </li>
-    <li>
-      <%= link_to 'My bookings', dashboard_path, class: "tab-underlined"%>
+    <li class="tabs">
+      <%= link_to 'My bookings', dashboard_path, class: "tab-underlined", data: { content_name: "my-bookings" }%>
     </li>
-    <li>
-      <%= link_to 'My equipment booked', dashboard_path, class: "tab-underlined"%>
+    <li class="tabs">
+      <%= link_to 'My equipment booked', dashboard_path, class: "tab-underlined", data: { content_name: "my-equipment-booked" } %>
     </li>
   </ul>
 </div>
 
 
-<div class="container-dashboard">
-  <div class= "row">
+<div class= "container-dashboard">
+  <div id= "my-equipment" class= "row tab-content active">
     <div class="col-md-6 col-md-offset-3">
       <% if @products %>
         <ul class="dash-ul">
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div id= "my-bookings" class="row tab-content">
     <% if @my_bookings %>
       <div class="col-md-6 col-md-offset-3">
         <ul class="dash-ul">
@@ -86,7 +86,7 @@
     <% end %>
   </div>
 
-  <div class= "row">
+  <div id= "my-equipment-booked" class= "row tab-content">
     <% if @bookings %>
       <div class="col-md-6 col-md-offset-3">
         <ul class="dash-ul">
