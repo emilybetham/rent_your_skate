@@ -29,3 +29,19 @@
 .h5{
   padding: 18px !important;
 }
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#map {
+  flex: 0 0 450px;
+  position: sticky !important;
+  top: 0;
+}
+
+.cards-container {
+  flex: 0 0 60%;
+  margin-left: 55px;
+}
