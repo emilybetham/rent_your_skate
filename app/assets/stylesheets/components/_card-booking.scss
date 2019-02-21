@@ -85,4 +85,17 @@ img.avatar-large {
 .status.Pending {
   color: lightgrey;
 }
+.border-pencil {
+  border-radius: 50%;
+  border: 1px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.pencil {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
 

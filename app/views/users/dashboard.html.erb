@@ -31,7 +31,9 @@
                 <p><%= product.description %></p>
               </div>
               <div class="message-status">
-                <i class="fas fa-pen-square"></i>
+                <div class="border-pencil">
+                <%= image_tag "color-pencil.png", width: 20, class: "pencil" %>
+                </div>
               </div>
             </li>
           <% end %>
@@ -104,7 +106,7 @@
               </div>
               <div class="message-status">
                 <p class="status <%= booking.status %>"><%= booking.status %></p>
-                <p class="price">€<%= booking.product.price  %></p>
+                <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
               </div>
             </li>
           <% end %>

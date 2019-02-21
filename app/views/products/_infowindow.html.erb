@@ -1,10 +1,12 @@
-<%= link_to product_path(product) do %>
+
   <div class="card-map">
+    <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path product.photo, height: 300, width: 290, crop: :fill %>')">
     <h5 class="h5"><%= product.name %></h5>
     <div class = "info-card">
       <p class="p"> <%= product.category %></p>
       <p class="p"> <%= product.address %></p>
-      <p class="p"><%= product.price %>€</p>
+      <p class="card-price"><%= product.price %>€</p>
     </div>
+    <%= link_to '', product_path(product), class: "card-link" %>
   </div>
-<% end %>
+</div>
