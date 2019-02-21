@@ -31,7 +31,9 @@
                 <p><%= product.description %></p>
               </div>
               <div class="message-status">
-                <i class="fas fa-pen-square"></i>
+                <div class="border-pencil">
+                <%= image_tag "color-pencil.png", width: 20, class: "pencil" %>
+                </div>
               </div>
             </li>
           <% end %>
