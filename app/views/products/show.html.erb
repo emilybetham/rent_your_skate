@@ -15,7 +15,7 @@
       <li class="list-booking-item-euro">
         <%= image_tag 'euro.png', width: 20 %>
         <strong><p>PRICE</p></strong>
-        <p><%= @product.price %>€/jour</p>
+        <p><%= @product.price %>€/day</p>
       </li>
     </ul>
     <br>
@@ -45,7 +45,7 @@
 
   <div class="wrapper-white">
     <div class="container">
-      <h2 class="text-center">Choose an other products:</h2>
+      <h2 class="text-center">Choose another product:</h2>
       <div class="row">
         <% @products_category.each do |product| %>
           <% if product != @product %>
