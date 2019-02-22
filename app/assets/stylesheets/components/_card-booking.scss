@@ -75,7 +75,23 @@ img.avatar-large {
 .message-status {
   font-size: 14px;
   font-weight: bold;
+  p {
+    margin: 1px;
+  }
 }
+
+#accept-btn {
+  &:hover {
+    color: #5cc14f;
+  }
+}
+
+#reject-btn {
+  &:hover {
+    color: red;
+  }
+}
+
 .status.accepted {
   color: #04A366;
 }

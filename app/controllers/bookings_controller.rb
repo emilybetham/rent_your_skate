@@ -14,7 +14,9 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to dashboard_path
     else
-      render :new
+      @product = @booking.product
+      @products = Product.all
+      render 'products/show'
     end
   end
 
