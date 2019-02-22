@@ -3,8 +3,18 @@ class ProductsController < ApplicationController
 
   def index
     skip_policy_scope
-    if params[:address].present?
+    if params[:address].present? && params[:category].present?
+      products = Product.near(params[:address], 5)
+      @products = []
+      products.each do |product|
+        if product.category == params[:category]
+          @products << product
+        end
+      end
+    elsif params[:address].present?
       @products = Product.near(params[:address], 5)
+    elsif params[:category].present?
+      @products = Product.where(category: params[:category])
     else
       @products = Product.where.not(latitude: nil, longitude: nil)
     end
