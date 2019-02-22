@@ -66,7 +66,7 @@ products_attributes = [
     user_id:      3
   },
   {
-    name:         'Dania\'s skateboard',
+    name:         'Dania\'s skate',
     category:     'skateboard',
     address:      '209 rue Saint Maur, 75010 Paris',
     description:  'A beautiful skate',
@@ -199,7 +199,43 @@ products_attributes = [
     price:        rand(1..20),
     photo:        'https://images.unsplash.com/photo-1528629297340-d1d466945dc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1995&q=80',
     user_id:      rand(1..4)
-  }
+  },
+  {
+    name:         'Dylan\'s skate',
+    category:     'skateboard',
+    address:      '56 rue Sedaine, 75011 Paris',
+    description:  'Lovely trotinette',
+    price:        rand(1..20),
+    photo:        'https://images.unsplash.com/photo-1549055799-ab32cbbc231b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+    user_id:      rand(1..4)
+  },
+  {
+    name:         'Claire\'s skate',
+    category:     'skateboard',
+    address:      '27 rue Leon Frot, 75011 Paris',
+    description:  'Lovely trotinette',
+    price:        rand(1..20),
+    photo:        'https://images.unsplash.com/photo-1549837844-2e235a2072e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
+    user_id:      rand(1..4)
+  },
+  {
+    name:         'Leonie\'s skate',
+    category:     'skateboard',
+    address:      '19 rue du Temple, 75004 Paris',
+    description:  'Lovely trotinette',
+    price:        rand(1..20),
+    photo:        'https://images.unsplash.com/photo-1549837844-1a628841910b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2095&q=80',
+    user_id:      rand(1..4)
+  },
+  {
+    name:         'Jad\'s skate',
+    category:     'skateboard',
+    address:      '22 rue de Sèvres, 75006 Paris',
+    description:  'Lovely trotinette',
+    price:        rand(1..20),
+    photo:        'https://images.unsplash.com/photo-1521491834855-fed61f0fa9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+    user_id:      rand(1..4)
+  },
 ]
 
 products_attributes.each do |attribute|
