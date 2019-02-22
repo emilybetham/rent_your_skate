@@ -32,8 +32,8 @@ products_attributes = [
   {
     name:         'Julia\'s skate',
     category:     'skateboard',
-    address:      '9 rue jean louis renardon, 69650 Saint Germain au mont d\'or',
-    description:  'A beautiful skate',
+    address:      '22 rue de Sèvres, 75006 Paris',
+    description:  'Lovely skate',
     price:        rand(1..20),
     photo:        'https://images.unsplash.com/photo-1531565637446-32307b194362?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=626&q=80',
     user_id:      4
@@ -204,7 +204,7 @@ products_attributes = [
     name:         'Dylan\'s skate',
     category:     'skateboard',
     address:      '56 rue Sedaine, 75011 Paris',
-    description:  'Lovely trotinette',
+    description:  'Lovely skate',
     price:        rand(1..20),
     photo:        'https://images.unsplash.com/photo-1549055799-ab32cbbc231b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
     user_id:      rand(1..4)
@@ -213,7 +213,7 @@ products_attributes = [
     name:         'Claire\'s skate',
     category:     'skateboard',
     address:      '27 rue Leon Frot, 75011 Paris',
-    description:  'Lovely trotinette',
+    description:  'Lovely skate',
     price:        rand(1..20),
     photo:        'https://images.unsplash.com/photo-1549837844-2e235a2072e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     user_id:      rand(1..4)
@@ -222,7 +222,7 @@ products_attributes = [
     name:         'Leonie\'s skate',
     category:     'skateboard',
     address:      '19 rue du Temple, 75004 Paris',
-    description:  'Lovely trotinette',
+    description:  'Lovely skate',
     price:        rand(1..20),
     photo:        'https://images.unsplash.com/photo-1549837844-1a628841910b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2095&q=80',
     user_id:      rand(1..4)
@@ -230,8 +230,8 @@ products_attributes = [
   {
     name:         'Jad\'s skate',
     category:     'skateboard',
-    address:      '22 rue de Sèvres, 75006 Paris',
-    description:  'Lovely trotinette',
+    address:      '9 rue jean louis renardon, 69650 Saint Germain au mont d\'or',
+    description:  'Lovely skate',
     price:        rand(1..20),
     photo:        'https://images.unsplash.com/photo-1521491834855-fed61f0fa9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
     user_id:      rand(1..4)
