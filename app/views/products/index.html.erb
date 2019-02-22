@@ -11,6 +11,7 @@
     id: "address-id",
     class: "form-control custom-margin custom-font-size",
     placeholder: "Enter your address" %>
+    <%= select_tag "category", options_for_select([ "", "bike", "scooter", "skateboard", "swim" ], "") %>
     <%= submit_tag 'Go!', id: "submit" %>
   <% end %>
   </div>
