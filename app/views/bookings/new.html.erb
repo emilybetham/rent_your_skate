@@ -3,5 +3,6 @@
 <%= simple_form_for [@product, @booking] do |f| %>
   <%= f.input :start_day, as: :string,  input_html: {class: "datepicker"} %>
   <%= f.input :end_day, as: :string,  input_html: {class: "datepicker"} %>
+  <%= f.input :message, as: :text, input_html: {id: "booking-message"} %>
   <%= f.submit %>
 <% end %>

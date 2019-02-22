@@ -20,7 +20,7 @@
 .container-booking {
   background-color: white;
   padding: 30px 50px;
-    margin: 25px 220px 138px 50px;
+  margin: 25px 220px 138px 50px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -63,8 +63,8 @@ form#new_booking {
 }
 
 input#booking_start_day {
-   width: 100px;
-   font-size: 14px;
+  width: 100px;
+  font-size: 14px;
   border-radius: 15px;
 
 }
@@ -72,9 +72,33 @@ input#booking_start_day {
 input#booking_end_day {
    width: 100px;
    font-size: 14px;
-       border-radius: 15px;
+   border-radius: 15px;
 }
 
 input.btn-medium {
-      padding: 7px 12px 7px 12px;
+  padding: 7px 12px 7px 12px;
+  position: absolute;
+  top: 97px;
+  right: 2px;
+}
+
+
+.customize-form {
+  position: relative;
+  padding-left: 62px;
+  padding-top: 10px;
+}
+
+#booking-message {
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 15px;
+  width: 205px;
+  height: 80px;
+  background-color: #eeeeee;
+  resize: none;
+}
+
+.center-text {
+  text-align: center;
 }

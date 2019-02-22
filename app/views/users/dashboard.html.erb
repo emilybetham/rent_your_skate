@@ -57,11 +57,11 @@
                 </div>
                 <div class="message-body">
                   <p><strong><%= booking.product.name %></strong></p>
-                  <p><%= "Booking request for your #{booking.product.category} from to" %></p>
+                  <p><%= booking.message %></p>
                 </div>
                 <div class="message-status">
-                  <p><%= link_to 'Accept', dashboard_path(booking_id: booking.id), method: :patch %></p>
-                  <p><%= link_to 'Reject', dashboard_path(booking_id: booking.id), method: :put %></p>
+                  <p><%= link_to 'Accept', dashboard_path(booking_id: booking.id), method: :patch, id:'accept-btn' %></p>
+                  <p><%= link_to 'Reject', dashboard_path(booking_id: booking.id), method: :put, id:'reject-btn' %></p>
                   <p class="price"><%= booking.product.price * (booking.end_day - booking.start_day).to_i %>€</p>
                 </div>
               </li>
