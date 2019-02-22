@@ -32,6 +32,7 @@
       } do |f| %>
       <%= f.input :start_day, as: :string,  input_html: {class: "datepicker item-booking mb-2 mr-sm-2"}, placeholder: 'Start day' %>
       <%= f.input :end_day, as: :string,  input_html: {class: "datepicker item-booking mb-2 mr-sm-2"}, placeholder: 'End day' %>
+      <%= f.input :message, as: :text, input_html: { id: "booking-message"}, placeholder: "Your message here" %>
       <%= f.submit 'Book', class: "btn-medium" %>
     <% end %>
 </div>
