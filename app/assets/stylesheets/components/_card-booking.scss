@@ -44,7 +44,7 @@ img.avatar-large {
 }
 .message-name {
   padding-left: 26px;
-  min-width: 244px;
+  min-width: 200px;
 }
 .message-name h3 {
   font-size: 13px;
@@ -60,6 +60,7 @@ img.avatar-large {
   padding-left: 10px;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
+  max-width: 370px;
 }
 .message-body {
   padding-left: 20px;
@@ -75,6 +76,7 @@ img.avatar-large {
 .message-status {
   font-size: 14px;
   font-weight: bold;
+  padding-left: 40px;
 }
 .status.accepted {
   color: #04A366;
