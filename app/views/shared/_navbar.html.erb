@@ -11,13 +11,13 @@
 
       <!-- Links when logged in -->
       <%= "Hello, #{current_user.name}!" %>
-      <%= link_to "Rent your equipment", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Your Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Add equipment", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to "Rent your equipment", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Add equipment", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>

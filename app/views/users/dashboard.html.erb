@@ -4,10 +4,10 @@
       <%= link_to 'My equipment', dashboard_path, class: "tab-underlined active", data: { content_name: "my-equipment" }%>
     </li>
     <li class="tabs">
-      <%= link_to 'My bookings', dashboard_path, class: "tab-underlined", data: { content_name: "my-bookings" }%>
+      <%= link_to 'Booking requests', dashboard_path, class: "tab-underlined", data: { content_name: "my-bookings" }%>
     </li>
     <li class="tabs">
-      <%= link_to 'My equipment booked', dashboard_path, class: "tab-underlined", data: { content_name: "my-equipment-booked" } %>
+      <%= link_to 'My bookings', dashboard_path, class: "tab-underlined", data: { content_name: "my-equipment-booked" } %>
     </li>
   </ul>
 </div>
@@ -46,7 +46,7 @@
     <% if @my_bookings %>
       <div class="col-md-8 col-md-offset-2">
         <ul class="dash-ul">
-          <h2 class="dash-h2">My bookings</h2>
+          <h2 class="dash-h2">Booking requests</h2>
           <% @my_bookings.each do |booking| %>
             <% if booking.status == 'Pending' %>
               <li class="message">
@@ -92,7 +92,7 @@
     <% if @bookings %>
       <div class="col-md-8 col-md-offset-2">
         <ul class="dash-ul">
-          <h2 class="dash-h2">My equipment booked</h2>
+          <h2 class="dash-h2">My bookings</h2>
           <% @bookings.each do |booking| %>
             <li class="message">
               <%= cl_image_tag booking.product.photo, height: 150, width: 200, crop: :fill, class: "avatar-large" %>
