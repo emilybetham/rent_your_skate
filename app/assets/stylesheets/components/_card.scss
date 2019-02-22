@@ -9,14 +9,21 @@
 }
 .card-user {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  background-color: white;
+  right: -37px;
+  top: -136px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: black;
+  vertical-align: middle;
 }
 .card-category {
   position: absolute;
   top: 10px;
   left: 10px;
   font-size: 20px;
+  position: relative;
 }
 .card-description {
   position: absolute;

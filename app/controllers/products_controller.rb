@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
     @booking = Booking.new
     # authorize @booking
     @booking.product = @product
+    @products_category = Product.where(category: @product.category)
   end
 
   def new
